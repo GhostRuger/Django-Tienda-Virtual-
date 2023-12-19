@@ -35,7 +35,7 @@
         <div class="">
             <hr>
             <div class="font-weight-bold text-danger">
-                Total (Impuestos incluidos)
+                Total
 
                 <div class="d-inline-block">
                     {{ order.total | price_format}}
@@ -45,6 +45,20 @@
             </div>
             <hr>
         </div>
+        <form action="">
+            <input type="radio" id="bank_transfer" name="payment_method" value="bank_transfer">
+            <label for="bank_transfer">Transferencia bancaria</label><br>
+        
+            <input type="radio" id="paypal" name="payment_method" value="paypal">
+            <label for="paypal">PayPal</label><br>
+        
+            <input type="radio" id="credit_card" name="payment_method" value="credit_card">
+            <label for="credit_card">Tarjeta de crédito</label><br>
+        
+            <input type="radio" id="debit_card" name="payment_method" value="debit_card">
+            <label for="debit_card">Tarjeta de débito</label><br>
+        
+        </form>
 
         <div class="mt-2 text-center">
             <a href="#" class="btn btn-warning"> Confirmar pedido</a>
